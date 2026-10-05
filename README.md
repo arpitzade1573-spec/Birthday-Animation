@@ -20,6 +20,7 @@ To run this project locally, follow these steps:
 
 ```bash
 # Clone the repository
+https://github.com/arpitzade1573-spec/Birthday-Animation.git
 
 
 # Navigate into the folder
@@ -32,15 +33,6 @@ npm install
 npm run dev
 
 
-# Navigate into the folder
-cd birthday-v3
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser to explore the site.
 
