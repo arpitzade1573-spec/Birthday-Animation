@@ -30,6 +30,16 @@ npm install
 
 # Start the development server
 npm run dev
+
+
+# Navigate into the folder
+cd birthday-v3
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser to explore the site.
