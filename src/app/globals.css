@@ -4,6 +4,7 @@ button {
   cursor: pointer;
 }
 
+
 .spinner {
   background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
   width: 180px;
@@ -38,7 +39,6 @@ button {
       0 0 60px rgba(255, 165, 0, 0.2),
       0 0 80px rgba(255, 165, 0, 0.2);
   }
-
   25% {
     transform: skewX(-5deg);
     box-shadow:
@@ -47,7 +47,6 @@ button {
       0 0 60px rgba(255, 165, 0, 0.5),
       0 0 80px rgba(255, 165, 0, 0.5);
   }
-
   50% {
     transform: skewX(10deg);
     box-shadow:
@@ -56,7 +55,6 @@ button {
       0 0 60px rgba(255, 165, 0, 0.3),
       0 0 80px rgba(255, 165, 0, 0.3);
   }
-
   75% {
     transform: skewX(-10deg);
     box-shadow:
@@ -65,7 +63,6 @@ button {
       0 0 60px rgba(255, 165, 0, 0.4),
       0 0 80px rgba(255, 165, 0, 0.4);
   }
-
   100% {
     transform: skewX(5deg);
     box-shadow:
@@ -99,7 +96,7 @@ button {
     0 5px 40px rgba(0, 0, 0, 0.5);
 }
 
-.cake>* {
+.cake > * {
   position: absolute;
 }
 
@@ -236,3 +233,35 @@ button {
   transform-origin: 50% 90%;
   animation: flicker 1s ease-in-out alternate infinite;
 }
+
+.swiper,
+.swiper-wrapper {
+  background: transparent !important;
+  overflow: visible;
+}
+
+.swiper-slide,
+.swiper-wrapper .swiper-slide,
+.swiper-slide.swiper-slide-active,
+.swiper-slide.swiper-slide-next,
+.swiper-slide.swiper-slide-prev {
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  overflow: hidden !important;
+  -webkit-clip-path: inset(0 round 20px) !important;
+  clip-path: inset(0 round 20px) !important;
+  background-clip: padding-box !important;
+  background: transparent !important;
+  transform-origin: center center !important;
+}
+
+.swiper-slide > *,
+.swiper-slide * {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  -webkit-clip-path: inset(0 round 20px) !important;
+  clip-path: inset(0 round 20px) !important;
+  background: transparent !important;
+}
+
+

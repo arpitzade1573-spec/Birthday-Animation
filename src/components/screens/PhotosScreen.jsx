@@ -13,10 +13,12 @@ export default function PhotosScreen({ onNext }) {
   const swiperRef = useRef(null)
 
   const photos = [
-    "/images/1.jpeg",
-    "/images/2.jpeg",
-    "/images/3.jpeg",
-    "/images/4.jpeg",
+    "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
+    "/images/4.jpg",
+    "/images/5.jpg",
+    "/images/6.jpg",
   ]
 
   return (
@@ -34,22 +36,39 @@ export default function PhotosScreen({ onNext }) {
       </div>
 
       <div className="relative flex justify-center">
-
-        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <Swiper
             effect="cards"
             grabCursor
             modules={[EffectCards]}
             onSwiper={(sw) => (swiperRef.current = sw)}
-            className="w-[280px] h-[420px] md:w-[340px] md:h-[460px]"
+            className="w-[230px] h-[420px] md:w-[330px] md:h-[520px]"
           >
             {photos.map((src, i) => (
-              <SwiperSlide key={i}>
-                <div className="h-full w-full rounded-2xl">
+              <SwiperSlide
+                key={i}
+                className="flex justify-center"
+                // clipPath + borderRadius + overflow set on the slide to make rounding reliable
+                style={{
+                  borderRadius: "20px",
+                  overflow: "hidden",
+                  WebkitBorderRadius: "20px",
+                  WebkitClipPath: "inset(0 round 20px)",
+                  clipPath: "inset(0 round 20px)",
+                }}
+              >
+                {/* inner wrapper kept full-size so image fills slide area */}
+                <div className="w-full h-full">
                   <img
                     src={src}
                     alt={`Memory ${i + 1}`}
-                    className="h-full w-full rounded-xl object-cover"
+                    className="w-full h-full object-contain block"
+                    // ensure block-level image (avoids whitespace artifacts)
+                    style={{ display: "block" }}
                   />
                 </div>
               </SwiperSlide>

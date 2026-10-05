@@ -29,8 +29,8 @@ export default function CakeScreen({ onNext, onDecorate }) {
 
   const burst = () => {
     confetti({
-      particleCount: 140,
-      spread: 90,
+      particleCount: 200,
+      spread: 120,
       origin: { y: 0.6 },
       colors: confettiColors,
     })
@@ -45,7 +45,7 @@ export default function CakeScreen({ onNext, onDecorate }) {
           animate={{ opacity: 1, scale: 1, }}
           transition={{ duration: 1, ease: "easeOut", delay: 1.5 }}
         >
-          Happy Birthday, Cutiepie!
+          A very Happy birthday my Dobuuuuu!
         </motion.div>
       )}
 
@@ -63,8 +63,8 @@ export default function CakeScreen({ onNext, onDecorate }) {
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <GradientButton onClick={lightCandle}>
-                <Flame size={20} />
-                Light the Candle
+                <Flame size={35} />
+                Fuuuu karoo!
               </GradientButton>
             </motion.div>
           ) : (
